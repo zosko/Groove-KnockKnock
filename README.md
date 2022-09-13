@@ -1,8 +1,10 @@
 # Groove Knock-Knock Sensor for SeeedStudio
 
-## 3D View
+## Previews
 
-![](images/3dview.png)
+KiCad View|Seeed PCB
+------|------
+![](images/3dview.png)|![](images/pcb.png)
 
 ## Code
 
@@ -28,9 +30,8 @@ void loop () {
       knockAlarm = true;
       delay(1000);
     }
-  }
-  else {
-    if( (millis()-prevKnockTime) > knockAlarmTime &&  knockAlarm) {
+  } else {
+    if( (millis() - prevKnockTime) > knockAlarmTime && knockAlarm) {
       Serial.println("No Knocks");
       knockAlarm = false;
     }
